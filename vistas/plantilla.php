@@ -53,6 +53,9 @@ session_start();
   <!-- Morris chart -->
   <link rel="stylesheet" href="vistas/bower_components/morris.js/morris.css">
 
+  <!-- Theme style -->
+  <link rel="stylesheet" href="vistas/dist/css/letras.css">
+
   <!--=====================================
   PLUGINS DE JAVASCRIPT
   ======================================-->
