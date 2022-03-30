@@ -56,7 +56,7 @@ $pdf->startPageGroup();
 $pdf->AddPage();
 
 // ---------------------------------------------------------
-
+// parte de la informacion de la factura
 $bloque1 = <<<EOF
 
 	<table>
@@ -84,10 +84,10 @@ $bloque1 = <<<EOF
 				<div style="font-size:8.5px; text-align:right; line-height:15px;">
 					
 					<br>
-					Teléfono: 300 786 52 49
+					Teléfono: 912 023 557
 					
 					<br>
-					ventas@inventorysystem.com
+					yeshuanator12@gmail.com
 
 				</div>
 				
