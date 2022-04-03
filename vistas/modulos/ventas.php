@@ -15,7 +15,7 @@ if($_SESSION["perfil"] == "Especial"){
 ?>
 <div class="content-wrapper">
 
-  <section class="content-header">
+  <section class="content-header"> 
     
     <h1>
       
@@ -52,7 +52,21 @@ if($_SESSION["perfil"] == "Especial"){
          <button type="button" class="btn btn-default pull-right" id="daterange-btn">
            
             <span>
-              <i class="fa fa-calendar"></i> Rango de fecha
+              <i class="fa fa-calendar"></i> 
+
+              <?php
+
+                if(isset($_GET["fechaInicial"])){
+
+                  echo $_GET["fechaInicial"]." - ".$_GET["fechaFinal"];
+                
+                }else{
+                 
+                  echo 'Rango de fecha';
+
+                }
+
+              ?>
             </span>
 
             <i class="fa fa-caret-down"></i>
@@ -114,7 +128,7 @@ if($_SESSION["perfil"] == "Especial"){
 
                   $respuestaCliente = ControladorClientes::ctrMostrarClientes($itemCliente, $valorCliente);
 
-                  echo '<td>'.$respuestaCliente["nombre"].'</td>';
+                  echo '<td>'.$respuestaCliente["nombre"].'</td>';   //Comentado SistemTaipe
 
                   $itemUsuario = "id";
                   $valorUsuario = $value["id_vendedor"];
@@ -134,10 +148,18 @@ if($_SESSION["perfil"] == "Especial"){
                   <td>
 
                     <div class="btn-group">
+
+
+
+                      <button class="btn btn-success btnImprimirTicket" codigoVenta="'.$value["codigo"].'">
+
+                        <i class="fa fa-print">Ticket</i>
+
+                      </button>
                         
                       <button class="btn btn-info btnImprimirFactura" codigoVenta="'.$value["codigo"].'">
 
-                        <i class="fa fa-print"></i>
+                        <i class="fa fa-print"></i>PDF
 
                       </button>';
 

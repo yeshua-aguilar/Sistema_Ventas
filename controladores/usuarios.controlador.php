@@ -10,8 +10,7 @@ class ControladorUsuarios{
 
 		if(isset($_POST["ingUsuario"])){
 
-			if(preg_match('/^[a-zA-Z0-9]+$/', $_POST["ingUsuario"]) &&
-			   preg_match('/^[a-zA-Z0-9]+$/', $_POST["ingPassword"])){
+			if(preg_match('/^[a-zA-Z0-9]+$/', $_POST["ingUsuario"])){
 
 			   	$encriptar = crypt($_POST["ingPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
 
@@ -65,13 +64,13 @@ class ControladorUsuarios{
 					}else{
 
 						echo '<br>
-							<div class="alert alert-danger">El usuario aún no está activado</div>';
+							<div class="alert alert-danger">El Usuario Aún No Está Activado</div>';
 
 					}		
 
 				}else{
 
-					echo '<br><div class="alert alert-danger">Error al ingresar, vuelve a intentarlo</div>';
+					echo '<br><div class="alert alert-danger">Error al Ingresar, Vuelve a Intentarlo</div>';
 
 				}
 

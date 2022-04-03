@@ -26,7 +26,7 @@ class ModeloVentas{
 
 			$stmt -> execute();
 
-			return $stmt -> fetchAll();
+			return $stmt -> fetchAll(); 
 
 		}
 		
@@ -138,7 +138,7 @@ class ModeloVentas{
 
 			$stmt -> execute();
 
-			return $stmt -> fetchAll();	
+			return $stmt -> fetchAll();	 
 
 
 		}else if($fechaInicial == $fechaFinal){

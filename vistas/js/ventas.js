@@ -129,7 +129,7 @@ $(".tablaVentas tbody").on("click", "button.agregarProducto", function(){
 
 	              '<span class="input-group-addon"><i class="ion ion-social-usd"></i></span>'+
 	                 
-	              '<input type="text" class="form-control nuevoPrecioProducto" precioReal="'+precio+'" name="nuevoPrecioProducto" value="'+precio+'" readonly required>'+
+	              '<input type="text" class="form-control nuevoPrecioProducto" onchange="cambios()" precioReal="'+precio+'" name="nuevoPrecioProducto" value="'+precio+'" required>'+
 	 
 	            '</div>'+
 	             
@@ -161,6 +161,18 @@ $(".tablaVentas tbody").on("click", "button.agregarProducto", function(){
      })
 
 });
+
+function cambios(){
+	sumarTotalPrecios();
+
+	        // AGREGAR IMPUESTO
+
+	        agregarImpuesto();
+
+	        // AGRUPAR PRODUCTOS EN FORMATO JSON
+
+	        listarProductos();
+}
 
 /*=============================================
 CUANDO CARGUE LA TABLA CADA VEZ QUE NAVEGUE EN ELLA
@@ -332,9 +344,7 @@ $(".btnAgregarProducto").click(function(){
 		         	)
 
 		         
-		         }
-
-		         
+		         }	         
 
 	         }
 
@@ -772,7 +782,19 @@ $(".tablas").on("click", ".btnImprimirFactura", function(){
 
 	var codigoVenta = $(this).attr("codigoVenta");
 
-	window.open("extensiones/tcpdf/pdf/factura.php?codigo="+codigoVenta, "_blank");
+	window.open("extensiones/tcpdf/pdf/factura.php?codigo="+codigoVenta, "_blank"); 
+
+})
+
+/*=============================================
+IMPRIMIR Ticket
+=============================================*/
+
+$(".tablas").on("click", ".btnImprimirTicket", function(){
+
+	var codigoVenta = $(this).attr("codigoVenta");
+
+	window.open("extensiones/tcpdf/pdf/ticket.php?codigo="+codigoVenta, "_blank"); 
 
 })
 
@@ -837,27 +859,33 @@ $(".daterangepicker.opensleft .ranges li").on("click", function(){
 		var mes = d.getMonth()+1;
 		var año = d.getFullYear();
 
-		if(mes < 10){
+		// if(mes < 10){
 
-			var fechaInicial = año+"-0"+mes+"-"+dia;
-			var fechaFinal = año+"-0"+mes+"-"+dia;
+		// 	var fechaInicial = año+"-0"+mes+"-"+dia;
+		// 	var fechaFinal = año+"-0"+mes+"-"+dia;
 
-		}else if(dia < 10){
+		// }else if(dia < 10){
 
-			var fechaInicial = año+"-"+mes+"-0"+dia;
-			var fechaFinal = año+"-"+mes+"-0"+dia;
+		// 	var fechaInicial = año+"-"+mes+"-0"+dia;
+		// 	var fechaFinal = año+"-"+mes+"-0"+dia;
 
-		}else if(mes < 10 && dia < 10){
+		// }else if(mes < 10 && dia < 10){
 
-			var fechaInicial = año+"-0"+mes+"-0"+dia;
-			var fechaFinal = año+"-0"+mes+"-0"+dia;
+		// 	var fechaInicial = año+"-0"+mes+"-0"+dia;
+		// 	var fechaFinal = año+"-0"+mes+"-0"+dia;
 
-		}else{
+		// }else{
 
-			var fechaInicial = año+"-"+mes+"-"+dia;
-	    	var fechaFinal = año+"-"+mes+"-"+dia;
+		// 	var fechaInicial = año+"-"+mes+"-"+dia;
+	 //    	var fechaFinal = año+"-"+mes+"-"+dia;
 
-		}	
+		// }
+
+		dia = ("0"+dia).slice(-2);
+		mes = ("0"+mes).slice(-2);
+
+		var fechaInicial = año+"-"+mes+"-"+dia;
+		var fechaFinal = año+"-"+mes+"-"+dia;	
 
     	localStorage.setItem("capturarRango", "Hoy");
 
@@ -867,6 +895,16 @@ $(".daterangepicker.opensleft .ranges li").on("click", function(){
 
 })
 
+/*=============================================
+ABRIR ARCHIVO XML EN NUEVA PESTAÑA
+=============================================*/
 
+$(".abrirXML").click(function(){
+
+	var archivo = $(this).attr("archivo");
+	window.open(archivo, "_blank");
+
+
+})
 
 
