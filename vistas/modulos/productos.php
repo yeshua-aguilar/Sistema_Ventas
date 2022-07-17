@@ -263,7 +263,7 @@ MODAL AGREGAR PRODUCTO
 
               <p class="help-block">Peso máximo de la imagen 2MB</p>
 
-              <img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail previsualizar" width="100px">
+              <img src="../vistas/img/productos/default/anonymous.png" class="img-thumbnail previsualizar" width="100px">
 
             </div>
 
@@ -465,7 +465,7 @@ MODAL EDITAR PRODUCTO
 
               <p class="help-block">Peso máximo de la imagen 2MB</p>
 
-              <img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail previsualizar" width="100px">
+              <img src="../vistas/img/productos/default/anonymous.png" class="img-thumbnail previsualizar" width="100px">
 
               <input type="hidden" name="imagenActual" id="imagenActual">
 

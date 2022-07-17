@@ -28,7 +28,7 @@
 
     if($_SESSION["perfil"] =="Administrador"){
 
-      include "inicio/cajas-superiores.php";
+      include "./inicio/cajas-superiores.php";
 
     }
 
@@ -44,7 +44,7 @@
 
           if($_SESSION["perfil"] =="Administrador"){
           
-           include "reportes/grafico-ventas.php";
+           include "./reportes/grafico-ventas.php";
 
           }
 
@@ -58,7 +58,7 @@
 
           if($_SESSION["perfil"] =="Administrador"){
           
-           include "reportes/productos-mas-vendidos.php";
+           include "./reportes/productos-mas-vendidos.php";
 
          }
 
@@ -72,7 +72,7 @@
 
           if($_SESSION["perfil"] =="Administrador"){
           
-           include "inicio/productos-recientes.php";
+           include "./inicio/productos-recientes.php";
 
          }
 

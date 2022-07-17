@@ -90,7 +90,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 
                   }else{
 
-                    echo '<td><img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail" width="40px"></td>';
+                    echo '<td><img src="../vistas/img/usuarios/default/anonymous.png" class="img-thumbnail" width="40px"></td>';
 
                   }
 
@@ -245,7 +245,7 @@ MODAL AGREGAR USUARIO
 
               <p class="help-block">Peso máximo de la foto 2MB</p>
 
-              <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizar" width="100px">
+              <img src="../vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizar" width="100px">
 
             </div>
 
@@ -390,7 +390,7 @@ MODAL EDITAR USUARIO
 
               <p class="help-block">Peso máximo de la foto 2MB</p>
 
-              <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizarEditar" width="100px">
+              <img src="../vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizarEditar" width="100px">
 
               <input type="hidden" name="fotoActual" id="fotoActual">
 
