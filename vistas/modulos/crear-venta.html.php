@@ -287,7 +287,7 @@
 
                 <tr>
                   <td>1.</td>                 
-                  <td><img src="../vistas/img/productos/default/anonymous.png" class="img-thumbnail" width="40px"></td>
+                  <td><img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail" width="40px"></td>
                   <td>00123</td>
                   <td>Lorem ipsum dolor sit amet</td>       
                   <td>20</td>                 

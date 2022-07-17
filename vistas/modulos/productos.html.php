@@ -59,7 +59,7 @@
           
           <tr>
             <td>1</td>
-            <td><img src="../vistas/img/productos/default/anonymous.png" class="img-thumbnail" width="40px"></td>
+            <td><img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail" width="40px"></td>
             <td>0001</td>
             <td>Lorem ipsum dolor sit amet</td>
             <td>Lorem Ipsum</td>
@@ -84,7 +84,7 @@
            <tr>
 
             <td>1</td>
-            <td><img src="../vistas/img/productos/default/anonymous.png" class="img-thumbnail" width="40px"></td>
+            <td><img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail" width="40px"></td>
             <td>0001</td>
             <td>Lorem ipsum dolor sit amet</td>
             <td>Lorem Ipsum</td>
@@ -108,7 +108,7 @@
 
           <tr>
             <td>1</td>
-            <td><img src="../vistas/img/productos/default/anonymous.png" class="img-thumbnail" width="40px"></td>
+            <td><img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail" width="40px"></td>
             <td>0001</td>
             <td>Lorem ipsum dolor sit amet</td>
             <td>Lorem Ipsum</td>
@@ -316,7 +316,7 @@ MODAL AGREGAR PRODUCTO
 
               <p class="help-block">Peso máximo de la imagen 2MB</p>
 
-              <img src="../vistas/img/productos/default/anonymous.png" class="img-thumbnail" width="100px">
+              <img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail" width="100px">
 
             </div>
 

@@ -59,11 +59,11 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 
         if(isset($_GET["fechaInicial"])){
 
-          echo '<a href="../vistas/modulos/descargar-reporte.php?reporte=reporte&fechaInicial='.$_GET["fechaInicial"].'&fechaFinal='.$_GET["fechaFinal"].'">';
+          echo '<a href="vistas/modulos/descargar-reporte.php?reporte=reporte&fechaInicial='.$_GET["fechaInicial"].'&fechaFinal='.$_GET["fechaFinal"].'">';
 
         }else{
 
-           echo '<a href="../vistas/modulos/descargar-reporte.php?reporte=reporte">';
+           echo '<a href="vistas/modulos/descargar-reporte.php?reporte=reporte">';
 
         }         
 
@@ -85,7 +85,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
             
             <?php
 
-            include "./reportes/grafico-ventas.php";
+            include "reportes/grafico-ventas.php";
 
             ?>
 
@@ -95,7 +95,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
              
             <?php
 
-            include "./reportes/productos-mas-vendidos.php";
+            include "reportes/productos-mas-vendidos.php";
 
             ?>
 
@@ -105,7 +105,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
              
             <?php
 
-            include "./reportes/vendedores.php";
+            include "reportes/vendedores.php";
 
             ?>
 
@@ -115,7 +115,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
              
             <?php
 
-            include "./reportes/compradores.php";
+            include "reportes/compradores.php";
 
             ?>
 
